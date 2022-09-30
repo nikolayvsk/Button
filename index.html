@@ -1,0 +1,29 @@
+<html>
+<body>
+  <button id="win" type="button">
+      Виграти
+  </button>
+  <button id="lose" type="button">
+      Програти
+  </button>
+  </body>
+<script>
+    
+document.getElementById("lose").addEventListener("click",functionName);
+function functionName(){
+   alert("Нехай щастить");
+}
+
+var winB = document.getElementById("win");
+winB.style.position = "absolute";
+document.addEventListener('mouseover', function(mouse) {
+	winB.style.left = getRandomInt(300, 500) + 'px';
+	winB.style.top  = getRandomInt(300, 500) + 'px';
+  }
+);
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min )) + min;
+}
+</script>
+</html>
